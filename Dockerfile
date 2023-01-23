@@ -5,3 +5,6 @@ RUN  echo 'kishan:kishan' | chpasswd
 RUN service ssh start
 EXPOSE 22
 CMD ["/usr/sbin/sshd","-D"]
+
+#docker build -t sshubuntu .
+#docker run -d -p 2022:22 sshubuntu
