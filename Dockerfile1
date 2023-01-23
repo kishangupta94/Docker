@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 RUN apt update && apt install  openssh-server sudo -y
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 kishan 
-RUN  echo 'root@123:kishan' | chpasswd
+RUN  echo 'kishan:root@123' | chpasswd
 RUN service ssh start
 EXPOSE 22
 CMD ["/usr/sbin/sshd","-D"]
